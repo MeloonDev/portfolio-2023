@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #050505;
+  background-image: url("/img/background.gif");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}

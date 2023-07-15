@@ -1,12 +1,17 @@
+import { useState } from "react";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import Experience from "./components/Experience";
 import Home from "./components/Home";
 import { Canvas } from "@react-three/fiber";
 import AnimatedCursor from "react-animated-cursor";
+import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
+  const [started, setStarted] = useState(false);
+
   return (
     <>
+      <LoadingScreen started={started} setStarted={setStarted} />
       <Canvas shadows>
         <ScrollControls pages={3} damping={0.1}>
           <Scroll>

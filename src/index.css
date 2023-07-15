@@ -10,4 +10,14 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   overflow-x: hidden;
+  color: #fff;
+  height: 300vh;
+}
+
+.home {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

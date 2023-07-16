@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  color: #fff;
+  background: #ffe5e8;
+}
+
+::selection {
+  color: #fff;
+  background: #ffe5e8;
+}
+
 html,
 body,
 #root {
@@ -153,4 +163,159 @@ body {
 
 .home-about button:active {
   transform: scale(0.95);
+}
+
+/*Skills*/
+.skills {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-image: url("/img/logo.png");
+  background-size: cover;
+  filter: brightness(1.2) contrast(1.25);
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #ffe5e8;
+  animation: textRotation 15s linear infinite;
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.3em;
+  transform-origin: 0 150px;
+}
+
+@keyframes textRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Contact*/
+.contact {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.contact h1 {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  line-height: 12rem;
+  font-size: 13rem;
+  border-bottom: 2px solid #ffe5e8;
+  font-family: "DM Serif Display", serif;
+}
+
+.contact .mail {
+  padding: 2rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(5deg);
+  overflow: hidden;
+  white-space: nowrap;
+  background: #c89fa2;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact .mail:hover {
+  background: #ffe5e8;
+}
+
+.contact .mail a {
+  padding-left: 1rem;
+  display: inline-block;
+  font-size: 4rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.socials {
+  position: absolute;
+  bottom: 10rem;
+  left: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.socials h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.socials ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socials ul li {
+  list-style: none;
+}
+
+.socials ul li a {
+  display: inline-block;
+  width: 8rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 3rem;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.socials ul li a:hover {
+  color: #c89fa2;
+  border-color: #c89fa2;
 }

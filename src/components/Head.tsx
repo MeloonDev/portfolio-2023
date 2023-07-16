@@ -7,7 +7,6 @@ export function Head() {
   const group = useRef<Group>(null);
 
   const { nodes, materials }: any = useGLTF("/models/head.glb");
-  console.log(nodes, materials);
 
   useFrame((_, delta) => {
     if (!group.current) return;

@@ -1,6 +1,15 @@
+import { useEffect, useRef } from "react";
+
 function Contact() {
+  // const ref = useRef(null);
+  // console.log(ref);
+
+  // useEffect(() => {
+  //   ref.current.scrollIntoView({ behavior: "smooth" });
+  // }, []);
+
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h1>Get in touch</h1>
       <div className="mail">
         <a href="mailto: mateusz.melaniuk98@gmail.com">

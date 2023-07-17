@@ -74,41 +74,50 @@ body {
 
 /*Home*/
 .home {
+  padding: 0 2rem;
   position: relative;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.home h3 {
+.home .home-text {
+  position: relative;
+  padding: 0 0 3rem 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.home .home-text h3 {
   position: absolute;
-  top: 7rem;
-  left: 4rem;
+  top: 3rem;
+  left: 2rem;
   font-size: 1.5rem;
   color: #c89fa2;
   font-family: "DM Serif Display", serif;
 }
 
-.home h1 {
-  position: absolute;
-  top: 100%;
-  left: 2rem;
+.home .home-text h1 {
+  width: 10rem;
   font-size: 12rem;
   line-height: 10rem;
   transform-origin: top left;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translate(-100%, 0);
 }
 
-.home h1.end {
-  top: 49%;
-  left: 12rem;
+.home .home-text h1.end {
+  align-self: center;
   color: #ffe5e8;
 }
 
 .home h2 {
-  position: absolute;
-  top: 70%;
-  left: 35rem;
-  transform: translate(-50%, -50%);
+  flex: 1;
+  align-self: flex-end;
+  margin: 10rem 2rem;
   font-size: 4rem;
   line-height: 4rem;
 }
@@ -122,9 +131,7 @@ body {
 }
 
 .home-about {
-  position: absolute;
-  top: 60%;
-  right: 2%;
+  margin-right: 2rem;
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -137,12 +144,12 @@ body {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-align: justify;
+  text-indent: 4rem;
   color: #ffe5e8;
   font-family: "DM Serif Display", serif;
 }
 
 .home-about button {
-  align-self: flex-end;
   padding: 0.3rem 0.5rem;
   outline: none;
   border: 1px solid #fff;
@@ -168,17 +175,71 @@ body {
 /*Skills*/
 .skills {
   position: relative;
+
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills h1 {
+  align-self: center;
+  font-size: 9.5rem;
+  color: #c89fa2;
+  font-family: "DM Serif Display", serif;
+}
+
+.skills .wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills .wrapper .skills-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skills .wrapper .skills-list ul {
+  padding: 0 3rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills .wrapper .skills-list ul li {
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.skills .wrapper .skills-list ul li:hover {
+  background-color: #fff;
+  color: #050505;
+}
+
+.skills .wrapper .skills-list h3 {
+  font-size: 3rem;
+  color: #ffe5e8;
+  font-family: "DM Serif Display", serif;
 }
 
 .circle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  flex: 0.6;
+  position: relative;
   width: 300px;
   height: 300px;
-  transform: translate(-50%, -50%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -222,26 +283,28 @@ body {
 /*Contact*/
 .contact {
   position: relative;
+  padding: 1rem 0 5rem 0;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .contact h1 {
-  position: absolute;
-  top: 2rem;
-  right: 4rem;
+  margin-right: 2rem;
+  align-self: flex-end;
   line-height: 12rem;
   font-size: 13rem;
-  border-bottom: 2px solid #ffe5e8;
+  color: #fff;
+  border-bottom: 2px solid #fff;
   font-family: "DM Serif Display", serif;
 }
 
 .contact .mail {
   padding: 2rem 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(5deg);
+  transform: rotate(5deg);
   overflow: hidden;
   white-space: nowrap;
   background: #c89fa2;
@@ -274,9 +337,8 @@ body {
 }
 
 .socials {
-  position: absolute;
-  bottom: 10rem;
-  left: 20rem;
+  margin-left: 12rem;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,4 +1,4 @@
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { Group } from "three";
@@ -7,6 +7,8 @@ export function Head() {
   const group = useRef<Group>(null);
 
   const { nodes, materials }: any = useGLTF("/models/head.glb");
+  const bakedTexture = useTexture("/models/baked.jpg");
+  bakedTexture.flipY = false;
 
   useFrame((_, delta) => {
     if (!group.current) return;
@@ -16,7 +18,6 @@ export function Head() {
   return (
     <group
       ref={group}
-      // {...props}
       dispose={null}
       position={[0, 0.2, 0]}
       rotation={[3, 0, 0]}

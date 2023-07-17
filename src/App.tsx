@@ -14,7 +14,8 @@ function App() {
   return (
     <>
       <LoadingScreen started={started} setStarted={setStarted} />
-      <Canvas shadows>
+
+      <Canvas shadows flat>
         <ScrollControls pages={4} damping={0.1}>
           <Scroll>
             <Experience />
@@ -23,10 +24,12 @@ function App() {
             <Home />
             <Skills />
             <Contact />
+            <div className="top"></div>
           </Scroll>
         </ScrollControls>
       </Canvas>
-      <AnimatedCursor
+
+      {/* <AnimatedCursor
         innerSize={4}
         outerSize={45}
         innerScale={1}
@@ -38,7 +41,7 @@ function App() {
         outerStyle={{
           border: "1px solid #fff",
         }}
-      />
+      /> */}
     </>
   );
 }

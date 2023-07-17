@@ -1,16 +1,9 @@
-import { useScroll } from "@react-three/drei";
-import { useEffect, useState } from "react";
+type HomeProps = {
+  setSection: (section: null | number) => void;
+};
 
-function Home() {
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const scroll = useScroll();
-
-  // console.log(scroll);
-
-  // useEffect(() => {
-  //   // scroll.offset = scrollPosition;
-  //   scroll.scroll.current = scrollPosition;
-  // }, [scrollPosition]);
+function Home(props: HomeProps) {
+  const { setSection } = props;
 
   return (
     <div className="home">
@@ -35,7 +28,7 @@ function Home() {
         </p>
         <button
           onClick={() => {
-            // setScrollPosition(1);
+            setSection(4);
           }}
         >
           <span>CONTACT ME</span>

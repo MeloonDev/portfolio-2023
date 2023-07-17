@@ -130,7 +130,7 @@ body {
   font-family: "DM Serif Display", serif;
 }
 
-.home-about {
+.home .home-about {
   margin-right: 2rem;
   width: 25%;
   display: flex;
@@ -140,7 +140,7 @@ body {
   gap: 1rem;
 }
 
-.home-about p {
+.home .home-about p {
   font-size: 1.5rem;
   line-height: 1.5rem;
   text-align: justify;
@@ -149,7 +149,7 @@ body {
   font-family: "DM Serif Display", serif;
 }
 
-.home-about button {
+.home .home-about button {
   padding: 0.3rem 0.5rem;
   outline: none;
   border: 1px solid #fff;
@@ -160,15 +160,16 @@ body {
   font-family: "DM Serif Display", serif;
   font-weight: 600;
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 
-.home-about button:hover {
+.home .home-about button:hover {
   border-color: #ffe5e8;
   color: #ffe5e8;
   transform: scale(1.05);
 }
 
-.home-about button:active {
+.home .home-about button:active {
   transform: scale(0.95);
 }
 
@@ -235,7 +236,7 @@ body {
   font-family: "DM Serif Display", serif;
 }
 
-.circle {
+.skills .circle {
   flex: 0.6;
   position: relative;
   width: 300px;
@@ -246,7 +247,7 @@ body {
   align-items: center;
 }
 
-.logo {
+.skills .circle .logo {
   position: absolute;
   width: 250px;
   height: 250px;
@@ -256,7 +257,7 @@ body {
   filter: brightness(1.2) contrast(1.25);
 }
 
-.text {
+.skills .circle .text {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -264,7 +265,7 @@ body {
   animation: textRotation 15s linear infinite;
 }
 
-.text span {
+.skills .circle .text span {
   position: absolute;
   left: 50%;
   font-size: 1.3em;
@@ -336,8 +337,16 @@ body {
   }
 }
 
-.socials {
-  margin-left: 12rem;
+.contact .wrapper {
+  padding: 0 12rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact .wrapper .socials {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
@@ -346,23 +355,23 @@ body {
   gap: 2rem;
 }
 
-.socials h3 {
+.contact .wrapper .socials h3 {
   font-size: 1.5rem;
   font-weight: 300;
 }
 
-.socials ul {
+.contact .wrapper .socials ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
-.socials ul li {
+.contact .wrapper .socials ul li {
   list-style: none;
 }
 
-.socials ul li a {
+.contact .wrapper .socials ul li a {
   display: inline-block;
   width: 8rem;
   text-align: center;
@@ -377,7 +386,20 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.socials ul li a:hover {
+.contact .wrapper .socials ul li a:hover {
   color: #c89fa2;
   border-color: #c89fa2;
+}
+
+.contact .wrapper .scroll-to-top {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 5rem;
+}
+
+.contact .wrapper .scroll-to-top:hover {
+  color: #ffe5e8;
 }

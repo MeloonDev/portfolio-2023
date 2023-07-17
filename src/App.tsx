@@ -5,10 +5,11 @@ import LoadingScreen from "./components/LoadingScreen";
 import Experience from "./components/Experience";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import AnimatedCursor from "react-animated-cursor";
 import Skills from "./pages/Skills";
+import ScrollManager from "./components/ScrollManager";
 
 function App() {
+  const [section, setSection] = useState<null | number>(null);
   const [started, setStarted] = useState(false);
 
   return (
@@ -17,31 +18,18 @@ function App() {
 
       <Canvas shadows flat>
         <ScrollControls pages={4} damping={0.1}>
+          <ScrollManager section={section} setSection={setSection} />
           <Scroll>
             <Experience />
           </Scroll>
           <Scroll html>
-            <Home />
+            <Home setSection={setSection} />
             <Skills />
-            <Contact />
+            <Contact setSection={setSection} />
             <div className="top"></div>
           </Scroll>
         </ScrollControls>
       </Canvas>
-
-      {/* <AnimatedCursor
-        innerSize={4}
-        outerSize={45}
-        innerScale={1}
-        outerScale={1.3}
-        outerAlpha={0}
-        innerStyle={{
-          backgroundColor: "#fff",
-        }}
-        outerStyle={{
-          border: "1px solid #fff",
-        }}
-      /> */}
     </>
   );
 }

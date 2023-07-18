@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import ScrollManager from "./components/ScrollManager";
+import Projects from "./pages/Projects";
 
 function App() {
   const [section, setSection] = useState<null | number>(null);
@@ -25,8 +26,8 @@ function App() {
           <Scroll html>
             <Home setSection={setSection} />
             <Skills />
+            <Projects />
             <Contact setSection={setSection} />
-            <div className="top"></div>
           </Scroll>
         </ScrollControls>
       </Canvas>

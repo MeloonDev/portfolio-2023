@@ -75,7 +75,6 @@ body {
 /*Home*/
 .home {
   padding: 0 2rem;
-  position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -164,8 +163,8 @@ body {
 }
 
 .home .home-about button:hover {
-  border-color: #ffe5e8;
-  color: #ffe5e8;
+  border-color: #c89fa2;
+  color: #c89fa2;
   transform: scale(1.05);
 }
 
@@ -175,8 +174,6 @@ body {
 
 /*Skills*/
 .skills {
-  position: relative;
-
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -192,8 +189,9 @@ body {
 
 .skills .wrapper {
   flex: 1;
+  padding-top: 1rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -238,6 +236,7 @@ body {
 
 .skills .circle {
   flex: 0.6;
+  align-self: center;
   position: relative;
   width: 300px;
   height: 300px;
@@ -281,9 +280,109 @@ body {
   }
 }
 
+/*Projects*/
+.projects {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.projects h1 {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  align-self: flex-start;
+  font-size: 9rem;
+  color: #c89fa2;
+  font-family: "DM Serif Display", serif;
+  transform-origin: bottom left;
+  transform: rotate(90deg);
+}
+
+.projects h3 {
+  font-size: 3rem;
+  color: #ffe5e8;
+}
+
+.projects h3 a {
+  display: inline-block;
+  color: #c89fa2;
+  text-decoration: underline;
+  font-family: "DM Serif Display", serif;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.projects h3 a:hover {
+  transform: scale(1.05);
+}
+
+.projects .project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.projects .project .project-desc {
+  /* width: 20%; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.projects .project:nth-child(3) .project-desc {
+  order: 2;
+}
+
+.projects .project .project-desc h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  font-family: "DM Serif Display", serif;
+}
+
+.projects .project .project-desc p {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #ffe5e8;
+}
+
+.projects .project .project-image {
+  position: relative;
+  width: 30%;
+  height: 23vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.projects .project .project-image:hover {
+  transform: scale(0.97);
+}
+
+.projects .project .project-image img {
+  width: 100%;
+  object-fit: cover;
+  filter: sepia(100%) hue-rotate(300deg) saturate(70%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.projects .project .project-image:hover img {
+  filter: sepia(0%) hue-rotate(0deg) saturate(100%);
+  transform: scale(1.1);
+}
+
 /*Contact*/
 .contact {
-  position: relative;
   padding: 1rem 0 5rem 0;
   height: 100vh;
   width: 100vw;
@@ -319,8 +418,8 @@ body {
 .contact .mail a {
   padding-left: 1rem;
   display: inline-block;
-  font-size: 4rem;
-  line-height: 2rem;
+  font-size: 7rem;
+  line-height: 6rem;
   font-weight: 500;
   color: #000;
   text-decoration: none;
@@ -338,7 +437,7 @@ body {
 }
 
 .contact .wrapper {
-  padding: 0 12rem;
+  padding: 0 6rem;
   width: 100%;
   display: flex;
   align-items: center;

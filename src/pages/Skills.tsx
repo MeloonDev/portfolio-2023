@@ -19,7 +19,7 @@ function Skills() {
             <li>npm</li>
             <li>Git</li>
           </ul>
-          <h3>Currently learning:</h3>
+          <h3> I’m currently learning:</h3>
           <ul>
             <li>Next JS</li>
             <li>c#</li>

@@ -20,9 +20,9 @@ function App() {
       <Canvas shadows flat>
         <ScrollControls pages={4} damping={0.1}>
           <ScrollManager section={section} setSection={setSection} />
-          <Scroll>
-            <Experience />
-          </Scroll>
+          {/* <Scroll> */}
+          <Experience />
+          {/* </Scroll> */}
           <Scroll html>
             <Home setSection={setSection} />
             <Skills />

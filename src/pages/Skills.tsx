@@ -15,7 +15,6 @@ function Skills() {
             <li>Three JS</li>
             <li>c++</li>
             <li>Blender</li>
-            <li>c++</li>
             <li>npm</li>
             <li>Git</li>
           </ul>

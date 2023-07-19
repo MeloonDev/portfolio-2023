@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Weather App",
     tools: "React, TypeScript, Tailwind CSS, OpenWeather API",
-    image: "/img/proj3.jpg",
+    image: "/img/proj3.png",
   },
 ];
 
@@ -22,15 +22,17 @@ function Projects() {
   return (
     <div className="projects">
       <h1>Projects</h1>
-      {projects.map((project, i) => (
-        <Project key={i} project={project} />
-      ))}
-      <h3>
-        See more on my{" "}
-        <a href="https://github.com/MeloonDev" target="_blank">
-          Github
-        </a>
-      </h3>
+      <div className="wrapper">
+        {projects.map((project, i) => (
+          <Project key={i} project={project} />
+        ))}
+        <h3>
+          See more on my{" "}
+          <a href="https://github.com/MeloonDev" target="_blank">
+            Github
+          </a>
+        </h3>
+      </div>
     </div>
   );
 }

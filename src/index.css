@@ -80,6 +80,37 @@ body {
   }
 }
 
+/*Cursor*/
+.cursor {
+  z-index: 100;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 0.75rem;
+  height: 0.75rem;
+  pointer-events: none;
+  background-color: #d159f3;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 50%;
+  transition-property: width, height, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.cursor.active {
+  background-color: transparent;
+  border-color: #662c76;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}
+
 /*Home*/
 .home {
   padding: 0 2rem;
@@ -97,15 +128,6 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-}
-
-.home .home-text h3 {
-  position: absolute;
-  top: 3rem;
-  left: 2rem;
-  font-size: 1.5rem;
-  color: #c89fa2;
-  font-family: "DM Serif Display", serif;
 }
 
 .home .home-text h1 {
@@ -189,12 +211,6 @@ body {
     padding: 0 0 2rem 0;
   }
 
-  .home .home-text h3 {
-    top: 4rem;
-    left: 1rem;
-    font-size: 1.3rem;
-  }
-
   .home .home-text h1 {
     width: 9rem;
     font-size: 10rem;
@@ -234,11 +250,6 @@ body {
     justify-content: space-between;
   }
 
-  .home .home-text h3 {
-    top: 3rem;
-    font-size: 1.2rem;
-  }
-
   .home .home-text h1 {
     width: 8rem;
     font-size: 9rem;
@@ -274,11 +285,6 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .home .home-text h3 {
-    top: 4rem;
-    font-size: 1.1rem;
-  }
-
   .home .home-text h1 {
     width: 7rem;
     font-size: 8rem;
@@ -304,10 +310,6 @@ body {
 }
 
 @media (max-width: 750px) {
-  .home .home-text h3 {
-    display: none;
-  }
-
   .home .home-text h1 {
     margin-bottom: 3rem;
     width: 4.5rem;
@@ -560,6 +562,7 @@ body {
   position: relative;
   width: 40%;
   max-height: 12rem;
+  border-radius: 1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -627,6 +630,26 @@ body {
   font-size: 1rem;
   line-height: 1rem;
   color: #ffe5e8;
+}
+
+.projects .project .project-repo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: #c89fa2;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem #6c6c6c;
+  transform: translateY(-120%);
+  transition: all 0.5s ease-in-out;
+}
+
+.projects .project:hover .project-repo {
+  transform: translateY(0);
 }
 
 .projects .wrapper h3 {
@@ -785,7 +808,7 @@ body {
 
 .contact .mail {
   padding: 2rem 0;
-  transform: rotate(5deg);
+  /* transform: rotate(5deg); */
   overflow: hidden;
   white-space: nowrap;
   background: #c89fa2;
@@ -987,6 +1010,11 @@ body {
 }
 
 @media (max-width: 500px) {
+  .contact {
+    justify-content: flex-start;
+    gap: 10rem;
+  }
+
   .contact h1 {
     margin-right: 0.2rem;
     line-height: 3rem;

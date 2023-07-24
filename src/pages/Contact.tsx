@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type ContactProps = {
   setSection: (section: null | number) => void;
 };
@@ -7,8 +9,24 @@ function Contact(props: ContactProps) {
 
   return (
     <div className="contact" id="contact">
-      <h1>Get in touch</h1>
-      <div className="mail">
+      <motion.h1
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+        }}
+      >
+        Get in touch
+      </motion.h1>
+      <motion.div
+        className="mail"
+        initial={{ opacity: 0, rotate: -5 }}
+        whileInView={{ opacity: 1, rotate: 5 }}
+        transition={{
+          opacity: { duration: 1.5 },
+        }}
+      >
         <a href="mailto: mateusz.melaniuk98@gmail.com">
           mateusz.melaniuk98@gmail.com -
         </a>
@@ -27,8 +45,16 @@ function Contact(props: ContactProps) {
         <a href="mailto: mateusz.melaniuk98@gmail.com">
           mateusz.melaniuk98@gmail.com -
         </a>
-      </div>
-      <div className="wrapper">
+      </motion.div>
+      <motion.div
+        className="wrapper"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+        }}
+      >
         <div className="socials">
           <h3>Socials</h3>
           <ul>
@@ -65,7 +91,7 @@ function Contact(props: ContactProps) {
         >
           🡡
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }

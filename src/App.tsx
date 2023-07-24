@@ -16,13 +16,12 @@ function App() {
   return (
     <>
       <LoadingScreen started={started} setStarted={setStarted} />
-
       <Canvas shadows flat>
-        <ScrollControls pages={4} damping={0.1}>
+        <ScrollControls pages={4} damping={0}>
           <ScrollManager section={section} setSection={setSection} />
-          {/* <Scroll> */}
-          <Experience />
-          {/* </Scroll> */}
+          <Scroll>
+            <Experience />
+          </Scroll>
           <Scroll html>
             <Home setSection={setSection} />
             <Skills />

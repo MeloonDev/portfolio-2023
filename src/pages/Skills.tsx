@@ -1,9 +1,28 @@
+import { motion } from "framer-motion";
+
 function Skills() {
   return (
     <div className="skills">
-      <h1>Skills</h1>
+      <motion.h1
+        initial={{ opacity: 0, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{
+          duration: 0.6,
+          delay: 0.4,
+        }}
+      >
+        Skills
+      </motion.h1>
       <div className="wrapper">
-        <div className="skills-list">
+        <motion.div
+          className="skills-list"
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{
+            duration: 0.5,
+            delay: 0.3,
+          }}
+        >
           <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -25,7 +44,7 @@ function Skills() {
             <li>Unity</li>
             <li>Figma</li>
           </ul>
-        </div>
+        </motion.div>
         <div className="circle">
           <div className="logo"></div>
           <div className="text">
